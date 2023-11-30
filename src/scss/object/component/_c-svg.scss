@@ -1,0 +1,18 @@
+@use "../../global" as *;
+
+.c-svg-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.c-svg-icon {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}

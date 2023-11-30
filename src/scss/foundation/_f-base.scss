@@ -1,0 +1,76 @@
+@use "../global/" as *;
+
+:root {
+  --vh: 1vh;
+  --header-height: 0;
+
+  --c-white: #fff;
+  --c-black: #000;
+  --c-skyBlue: #44afbb;
+  --c-skyBlue-rgb: 68, 175, 187;
+  --c-forestGreen: #22915d;
+
+  --c-primary: var(--c-skyBlue);
+  --c-secondary: var(--c-forestGreen);
+
+  --ff-gothic: YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3', sans-serif;
+
+  --base-spacing: 1rem;
+}
+
+:root {
+  --my-preset--background: var(--c-white);
+  --my-preset--color-text: var(--c-black);
+  --my-preset--base-font-family: var(--ff-gothic);
+
+}
+
+html {
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; /* Safari */
+}
+
+body {
+  background: var(--my-preset--background);
+  color: var(--my-preset--color-text);
+  font-family: var(--my-preset--base-font-family);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+
+  @include mq(max960) {
+    font-size: 2.6rem;
+  }
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+a:not([class]) {
+  color: $primary;
+  text-decoration: underline;
+  @include mq(min961) {
+    transition: opacity ease 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+picture {
+  line-height: 0;
+  display: inherit;
+
+  img {
+    vertical-align: baseline;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+

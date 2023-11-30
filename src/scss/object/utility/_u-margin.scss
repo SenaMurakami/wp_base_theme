@@ -1,0 +1,16 @@
+@use "../../global" as *;
+
+@for $i from 1 through 10 {
+  .u-mt-#{$i} {
+    margin-top: calc($baseSpacing * $i) !important;
+  }
+  .u-mr-#{$i} {
+    margin-right: calc($baseSpacing * $i) !important;
+  }
+  .u-ml-#{$i} {
+    margin-left: calc($baseSpacing * $i) !important;
+  }
+  .u-mb-#{$i} {
+    margin-bottom: calc($baseSpacing * $i) !important;
+  }
+}

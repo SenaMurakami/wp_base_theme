@@ -1,0 +1,38 @@
+@use "sass:math";
+
+// fontSize
+@mixin fontSize ($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: math.div($lineHeight , $fontSize);
+}
+
+// breakpoints
+$breakpoint: (
+  max520: 'screen and (max-width: 520px)',
+  max960: 'screen and (max-width: 960px)',
+  min961: 'screen and (min-width: 961px)',
+  max1200: 'screen and (max-width: 1200px)',
+  max1366: 'screen and (max-width: 1366px)',
+  min1367: 'screen and (min-width: 1367px)',
+  max1550: 'screen and (max-width: 1550px)',
+  max1920: 'screen and (max-width: 1920px)',
+  min1921: 'screen and (min-width: 1921px)',
+);
+
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+   @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+// changeVw
+@function vw($size, $vw) {
+  $number: math.div($size, $vw);
+  @return $number * 100vw;
+}

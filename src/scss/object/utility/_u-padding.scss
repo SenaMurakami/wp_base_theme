@@ -1,0 +1,16 @@
+@use "../../global" as *;
+
+@for $i from 1 through 10 {
+  .u-pt-#{$i} {
+    padding-top: calc($baseSpacing * $i) !important;
+  }
+  .u-pr-#{$i} {
+    padding-right: calc($baseSpacing * $i) !important;
+  }
+  .u-pl-#{$i} {
+    padding-left: calc($baseSpacing * $i) !important;
+  }
+  .u-pb-#{$i} {
+    padding-bottom: calc($baseSpacing * $i) !important;
+  }
+}
