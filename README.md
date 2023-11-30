@@ -11,11 +11,11 @@ scssとjsはwebpack、画像はshrapを利用しています。
 ```
 git clone https://github.com/SenaMurakami/wp_base_theme.git <your_theme_name>
 ```
-2. テーマディレクトリに移動
+2. テーマディレクトリに移動します。
 ```
 cd <your_theme_name>
 ```
-3. 必要なパッケージをインストール
+3. 必要なパッケージをインストールします。
 ```
 npm ci
 ```
@@ -33,3 +33,7 @@ npm run build:prod
 ```
 npm run sharp:all
 ```
+
+## CSS設計
+
+FLOCCSで設計。js関連のクラスは`js-`のようにプレフィックスをつけてください。
