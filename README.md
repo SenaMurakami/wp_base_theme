@@ -1,11 +1,11 @@
-[![license][license]][license-url]
+
 
 # WP BASE THEME
 
 WordPressでテーマ開発を行うときのベースです。
 scssとjsはwebpack、画像はshrapを利用しています。
 
-## 始め方
+## インストール
 
 1. `themes`ディレクトリにクローンまたは [ダウンロード](https://github.com/SenaMurakami/wp_base_theme/archive/refs/heads/master.zip "Download the WP Base Theme Zip") してください。`(./wp-content/themes)`
 ```
@@ -19,5 +19,17 @@ cd <your_theme_name>
 ```
 npm ci
 ```
-4. `npm run dev` コマンドで開発開始
-5. `npm run build:prod` は本番アップ用
+
+## 始め方
+- 開発開始
+```
+npm run dev
+```
+- 本番アップ用
+```
+npm run build:prod
+```
+- 画像を全て圧縮
+```
+npm run sharp:all
+```
